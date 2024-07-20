@@ -3,6 +3,11 @@
 	unique_key='customer_id'
 ) }}
 
+with source as (
+	select 
+	* 
+	from {{source('northwind_prod', 'customers')}}
+)
 
 select
 	customer_id,
@@ -17,4 +22,4 @@ select
 	phone,
 	fax
 from
-	{{source('northwind_prod', 'customers')}}
+	source

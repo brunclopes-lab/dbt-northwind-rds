@@ -34,7 +34,13 @@ models:
     # Config indicated by + and applies to all files under models/example/
     staging:
       +schema: staging
+      +docs: 
+        node_color: "#cd7f32"
     intermediate:
-      +schema: intemediate
+      +schema: intermediate
+      +docs: 
+        node_color: "#c0c0c0"
     reports:
       +schema: gold
+      +docs:
+        node_color: "#e6b530"

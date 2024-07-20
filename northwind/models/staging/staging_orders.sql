@@ -2,6 +2,17 @@
     materialized='table'
 ) }}
 
+with orders as (
+	select 
+	*
+	from {{source('northwind_prod', 'orders')}}
+),
+order_details as (
+	select 
+	* 
+	from {{source('northwind_prod', 'order_details')}}
+	)
+
 select
 	o.order_id,
 	o.customer_id,
@@ -22,6 +33,6 @@ select
 	od.quantity,
 	od.discount
 from
-	{{source('northwind_prod', 'orders')}} o 
-left join 	{{source('northwind_prod', 'order_details')}} od 
+	orders o 
+left join order_details od 
 on o.order_id = od.order_id

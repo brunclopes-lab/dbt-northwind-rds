@@ -3,6 +3,12 @@
 	unique_key='employee_id'
 ) }}
 
+with source as (
+	select 
+	* 
+	from {{source('northwind_prod', 'employees')}}
+)
+
 select
 	employee_id,
 	last_name,
@@ -23,4 +29,4 @@ select
 	reports_to,
 	photo_path
 from
-	{{source('northwind_prod', 'employees')}}
+	source

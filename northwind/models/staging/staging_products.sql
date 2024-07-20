@@ -3,6 +3,17 @@
 	unique_key='product_id'
 ) }}
 
+with products as (
+	select 
+	* 
+	from {{source('northwind_prod', 'products')}}
+), 
+categories as (
+	select 
+	* 
+	from {{source('northwind_prod', 'categories')}}	
+)
+
 select
 	p.product_id,
 	p.product_name,
@@ -17,6 +28,6 @@ select
 	c.category_name,
 	c.description as category_description
 from
-	{{source('northwind_prod', 'products')}} p 
-left join {{source('northwind_prod', 'categories')}} c 
+	products p 
+left join categories c 
 on p.category_id = c.category_id

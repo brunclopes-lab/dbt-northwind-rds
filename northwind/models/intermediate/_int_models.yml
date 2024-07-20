@@ -6,20 +6,20 @@ models:
     columns:
       - name: customer_id  # Nome da coluna
         description: "ID único do cliente"  # Descrição da coluna
-        tests:
+        data_tests:
           - not_null  # Teste para garantir que a coluna não tenha valores nulos
           - unique  # Teste para garantir que os valores na coluna sejam únicos
       - name: company_name  # Nome da coluna
         description: "Descrição do cliente"  # Descrição da coluna
-        tests:
+        data_tests:
           - not_null  # Teste para garantir que a coluna não tenha valores nulos
       - name: contact_name  # Nome da coluna
         description: "Descrição do contato"  # Descrição da coluna
-        tests:
+        data_tests:
           - not_null  # Teste para garantir que a coluna não tenha valores nulos
       - name: contact_title  # Nome da coluna
         description: "Cargo do contato"  # Descrição da coluna
-        tests:
+        data_tests:
           - not_null  # Teste para garantir que a coluna não tenha valores nulos
       - name: address  # Nome da coluna
         description: "Endereço do cliente"  # Descrição da coluna
@@ -41,16 +41,16 @@ models:
     columns:
       - name: employee_id  # Nome da coluna
         description: "ID único do funcionário"  # Descrição da coluna
-        tests:
+        data_tests:
           - not_null  # Teste para garantir que a coluna não tenha valores nulos
           - unique  # Teste para garantir que os valores na coluna sejam únicos
       - name: last_name  # Nome da coluna
         description: "Sobrenome do funcionário"  # Descrição da coluna
-        tests:
+        data_tests:
           - not_null  # Teste para garantir que a coluna não tenha valores nulos
       - name: first_name  # Nome da coluna
         description: "Nome do funcionário"  # Descrição da coluna
-        tests:
+        data_tests:
           - not_null  # Teste para garantir que a coluna não tenha valores nulos
       - name: title  # Nome da coluna
         description: "Cargo do funcionário"  # Descrição da coluna
@@ -86,12 +86,12 @@ models:
     columns:
       - name: product_id  # Nome da coluna
         description: "ID único do produto"  # Descrição da coluna
-        tests:
+        data_tests:
           - not_null  # Teste para garantir que a coluna não tenha valores nulos
           - unique  # Teste para garantir que os valores na coluna sejam únicos
       - name: product_name  # Nome da coluna
         description: "Nome do produto"  # Descrição da coluna
-        tests:
+        data_tests:
           - not_null  # Teste para garantir que a coluna não tenha valores nulos
       - name: supplier_id  # Nome da coluna
         description: "ID do fornecedor do produto"  # Descrição da coluna
@@ -119,12 +119,12 @@ models:
     columns:
       - name: shipper_id  # Nome da coluna
         description: "ID único da transportadora"  # Descrição da coluna
-        tests:
+        data_tests:
           - not_null  # Teste para garantir que a coluna não tenha valores nulos
           - unique  # Teste para garantir que os valores na coluna sejam únicos
       - name: company_name  # Nome da coluna
         description: "Nome da empresa transportadora"  # Descrição da coluna
-        tests:
+        data_tests:
           - not_null  # Teste para garantir que a coluna não tenha valores nulos
       - name: phone  # Nome da coluna
         description: "Telefone da transportadora"  # Descrição da coluna
@@ -134,19 +134,19 @@ models:
     columns:
       - name: order_id  # Nome da coluna
         description: "ID único do pedido"  # Descrição da coluna
-        tests:
+        data_tests:
           - not_null  # Teste para garantir que a coluna não tenha valores nulos
       - name: customer_id  # Nome da coluna
         description: "ID do cliente que fez o pedido"  # Descrição da coluna
-        tests:
+        data_tests:
           - not_null  # Teste para garantir que a coluna não tenha valores nulos
       - name: employee_id  # Nome da coluna
         description: "ID do funcionário que atendeu o pedido"  # Descrição da coluna
-        tests:
+        data_tests:
           - not_null  # Teste para garantir que a coluna não tenha valores nulos
       - name: order_date  # Nome da coluna
         description: "Data do pedido"  # Descrição da coluna
-        tests:
+        data_tests:
           - not_null  # Teste para garantir que a coluna não tenha valores nulos
       - name: required_date  # Nome da coluna
         description: "Data requerida para entrega do pedido"  # Descrição da coluna
