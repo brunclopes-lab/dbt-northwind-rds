@@ -1,4 +1,5 @@
 {{ config(
+	alias='fact_orders',
     materialized='table'
 ) }}
 
@@ -22,4 +23,4 @@ select
 	quantity,
 	discount
 from
-	{{ref('staging_orders')}}
+	{{ref('staging_fact_orders')}}

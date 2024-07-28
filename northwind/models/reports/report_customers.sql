@@ -2,4 +2,4 @@
     materialized='table'
 ) }}
 
-select * from {{ref('int_customers')}}
+select * from {{ref('int_dim_customers')}}

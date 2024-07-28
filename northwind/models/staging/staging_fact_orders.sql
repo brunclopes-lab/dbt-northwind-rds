@@ -1,4 +1,5 @@
 {{ config(
+	alias='fact_orders',
     materialized='table'
 ) }}
 

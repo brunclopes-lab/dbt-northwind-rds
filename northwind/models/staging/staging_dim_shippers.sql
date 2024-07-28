@@ -1,4 +1,5 @@
 {{ config(
+	alias='dim_shippers',
     materialized='table',
 	unique_key='shipper_id'
 ) }}

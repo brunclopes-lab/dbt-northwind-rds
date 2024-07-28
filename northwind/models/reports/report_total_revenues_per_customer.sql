@@ -8,9 +8,9 @@ select
     customers.company_name, 
     sum(orders.unit_price * orders.quantity * (1.0 - orders.discount)) as total
 from 
-    {{ ref('int_customers') }} as customers
+    {{ ref('int_dim_customers') }} as customers
 inner join 
-    {{ ref('int_orders') }} as orders on customers.customer_id = orders.customer_id
+    {{ ref('int_fact_orders') }} as orders on customers.customer_id = orders.customer_id
 group by 
     customers.company_name
 order by 

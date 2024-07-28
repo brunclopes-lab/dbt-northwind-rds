@@ -1,4 +1,5 @@
 {{ config(
+	alias='dim_products',
     materialized='table'
 ) }}
 
@@ -16,4 +17,4 @@ select
 	category_name,
 	category_description
 from
-	{{ref('staging_products')}}
+	{{ref('staging_dim_products')}}

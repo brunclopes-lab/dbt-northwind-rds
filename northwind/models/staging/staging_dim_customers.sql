@@ -1,4 +1,5 @@
 {{ config(
+	alias='dim_customers',
     materialized='table',
 	unique_key='customer_id'
 ) }}

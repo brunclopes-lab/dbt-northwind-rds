@@ -1,178 +1,186 @@
-version: 2  # Versão do esquema de metadados
+version: 2 
 
 models:
-  - name: int_customers  # Nome do modelo
-    description: "Dimensão de clientes"  # Descrição do modelo
+  - name: int_dim_customers  
+    description: "Dimensão de clientes"  
     columns:
-      - name: customer_id  # Nome da coluna
-        description: "ID único do cliente"  # Descrição da coluna
+      - name: customer_id  
+        description: "ID único do cliente"  
         data_tests:
-          - not_null  # Teste para garantir que a coluna não tenha valores nulos
-          - unique  # Teste para garantir que os valores na coluna sejam únicos
-      - name: company_name  # Nome da coluna
-        description: "Descrição do cliente"  # Descrição da coluna
+          - not_null  
+          - unique  
+      - name: company_name  
+        description: "Descrição do cliente"  
         data_tests:
-          - not_null  # Teste para garantir que a coluna não tenha valores nulos
-      - name: contact_name  # Nome da coluna
-        description: "Descrição do contato"  # Descrição da coluna
+          - not_null  
+      - name: contact_name  
+        description: "Descrição do contato"  
         data_tests:
-          - not_null  # Teste para garantir que a coluna não tenha valores nulos
-      - name: contact_title  # Nome da coluna
-        description: "Cargo do contato"  # Descrição da coluna
+          - not_null  
+      - name: contact_title  
+        description: "Cargo do contato"  
         data_tests:
-          - not_null  # Teste para garantir que a coluna não tenha valores nulos
-      - name: address  # Nome da coluna
-        description: "Endereço do cliente"  # Descrição da coluna
-      - name: city  # Nome da coluna
-        description: "Cidade do cliente"  # Descrição da coluna
-      - name: region  # Nome da coluna
-        description: "Estado do cliente"  # Descrição da coluna
-      - name: postal_code  # Nome da coluna
-        description: "Código postal do cliente"  # Descrição da coluna
-      - name: country  # Nome da coluna
-        description: "País do cliente"  # Descrição da coluna
-      - name: phone  # Nome da coluna
-        description: "Telefone do cliente"  # Descrição da coluna
-      - name: fax  # Nome da coluna
-        description: "Fax do cliente"  # Descrição da coluna
+          - not_null  
+      - name: address  
+        description: "Endereço do cliente"  
+      - name: city  
+        description: "Cidade do cliente"  
+      - name: region  
+        description: "Estado do cliente"  
+      - name: postal_code  
+        description: "Código postal do cliente"  
+      - name: country  
+        description: "País do cliente"  
+      - name: phone  
+        description: "Telefone do cliente"  
+      - name: fax  
+        description: "Fax do cliente"  
 
-  - name: int_employees  # Nome do modelo
-    description: "Dimensão de funcionários"  # Descrição do modelo
+  - name: int_dim_employees  
+    description: "Dimensão de funcionários"  
     columns:
-      - name: employee_id  # Nome da coluna
-        description: "ID único do funcionário"  # Descrição da coluna
+      - name: employee_id  
+        description: "ID único do funcionário"  
         data_tests:
-          - not_null  # Teste para garantir que a coluna não tenha valores nulos
-          - unique  # Teste para garantir que os valores na coluna sejam únicos
-      - name: last_name  # Nome da coluna
-        description: "Sobrenome do funcionário"  # Descrição da coluna
+          - not_null  
+          - unique  
+      - name: last_name  
+        description: "Sobrenome do funcionário"  
         data_tests:
-          - not_null  # Teste para garantir que a coluna não tenha valores nulos
-      - name: first_name  # Nome da coluna
-        description: "Nome do funcionário"  # Descrição da coluna
+          - not_null  
+      - name: first_name  
+        description: "Nome do funcionário"  
         data_tests:
-          - not_null  # Teste para garantir que a coluna não tenha valores nulos
-      - name: title  # Nome da coluna
-        description: "Cargo do funcionário"  # Descrição da coluna
-      - name: title_of_courtesy  # Nome da coluna
-        description: "Tratamento de cortesia do funcionário"  # Descrição da coluna
-      - name: birth_date  # Nome da coluna
-        description: "Data de nascimento do funcionário"  # Descrição da coluna
-      - name: hire_date  # Nome da coluna
-        description: "Data de contratação do funcionário"  # Descrição da coluna
-      - name: address  # Nome da coluna
-        description: "Endereço do funcionário"  # Descrição da coluna
-      - name: city  # Nome da coluna
-        description: "Cidade do funcionário"  # Descrição da coluna
-      - name: region  # Nome da coluna
-        description: "Estado do funcionário"  # Descrição da coluna
-      - name: postal_code  # Nome da coluna
-        description: "Código postal do funcionário"  # Descrição da coluna
-      - name: country  # Nome da coluna
-        description: "País do funcionário"  # Descrição da coluna
-      - name: home_phone  # Nome da coluna
-        description: "Telefone residencial do funcionário"  # Descrição da coluna
-      - name: extension  # Nome da coluna
-        description: "Ramal do funcionário"  # Descrição da coluna
-      - name: photo  # Nome da coluna
-        description: "Foto do funcionário"  # Descrição da coluna
-      - name: notes  # Nome da coluna
-        description: "Notas sobre o funcionário"  # Descrição da coluna
-      - name: reports_to  # Nome da coluna
-        description: "ID do gerente ao qual o funcionário se reporta"  # Descrição da coluna
+          - not_null  
+      - name: title  
+        description: "Cargo do funcionário"  
+      - name: title_of_courtesy  
+        description: "Tratamento de cortesia do funcionário"  
+      - name: birth_date  
+        description: "Data de nascimento do funcionário"  
+      - name: hire_date  
+        description: "Data de contratação do funcionário"  
+      - name: address  
+        description: "Endereço do funcionário"  
+      - name: city  
+        description: "Cidade do funcionário"  
+      - name: region  
+        description: "Estado do funcionário"  
+      - name: postal_code  
+        description: "Código postal do funcionário"  
+      - name: country  
+        description: "País do funcionário"  
+      - name: home_phone  
+        description: "Telefone residencial do funcionário"  
+      - name: extension  
+        description: "Ramal do funcionário"  
+      - name: photo  
+        description: "Foto do funcionário"  
+      - name: notes  
+        description: "Notas sobre o funcionário"  
+      - name: reports_to  
+        description: "ID do gerente ao qual o funcionário se reporta"  
+      - name: photo_path  
+        description: "Caminho da foto do funcionário"  
 
-  - name: int_products  # Nome do modelo
-    description: "Dimensão de produtos"  # Descrição do modelo
+  - name: int_dim_products  
+    description: "Dimensão de produtos"  
     columns:
-      - name: product_id  # Nome da coluna
-        description: "ID único do produto"  # Descrição da coluna
+      - name: product_id  
+        description: "ID único do produto"  
         data_tests:
-          - not_null  # Teste para garantir que a coluna não tenha valores nulos
-          - unique  # Teste para garantir que os valores na coluna sejam únicos
-      - name: product_name  # Nome da coluna
-        description: "Nome do produto"  # Descrição da coluna
+          - not_null  
+          - unique  
+      - name: product_name  
+        description: "Nome do produto"  
         data_tests:
-          - not_null  # Teste para garantir que a coluna não tenha valores nulos
-      - name: supplier_id  # Nome da coluna
-        description: "ID do fornecedor do produto"  # Descrição da coluna
-      - name: category_id  # Nome da coluna
-        description: "ID da categoria do produto"  # Descrição da coluna
-      - name: quantity_per_unit  # Nome da coluna
-        description: "Quantidade por unidade do produto"  # Descrição da coluna
-      - name: unit_price  # Nome da coluna
-        description: "Preço por unidade do produto"  # Descrição da coluna
-      - name: units_in_stock  # Nome da coluna
-        description: "Unidades em estoque do produto"  # Descrição da coluna
-      - name: units_on_order  # Nome da coluna
-        description: "Unidades do produto em pedido"  # Descrição da coluna
-      - name: reorder_level  # Nome da coluna
-        description: "Nível de reordenação do produto"  # Descrição da coluna
-      - name: discontinued  # Nome da coluna
-        description: "Indicador se o produto foi descontinuado"  # Descrição da coluna
-      - name: category_name  # Nome da coluna
-        description: "Nome da categoria do produto"  # Descrição da coluna
-      - name: category_description  # Nome da coluna
-        description: "Descrição da categoria do produto"  # Descrição da coluna
+          - not_null  
+      - name: supplier_id  
+        description: "ID do fornecedor do produto"  
+      - name: category_id  
+        description: "ID da categoria do produto"  
+      - name: quantity_per_unit  
+        description: "Quantidade por unidade do produto"  
+      - name: unit_price  
+        description: "Preço por unidade do produto"  
+      - name: units_in_stock  
+        description: "Unidades em estoque do produto"  
+      - name: units_on_order  
+        description: "Unidades do produto em pedido"  
+      - name: reorder_level  
+        description: "Nível de reordenação do produto"  
+      - name: discontinued  
+        description: "Indicador se o produto foi descontinuado"  
+      - name: category_name  
+        description: "Nome da categoria do produto"  
+      - name: category_description  
+        description: "Descrição da categoria do produto"  
 
-  - name: int_shippers  # Nome do modelo
-    description: "Dimensão de transportadoras"  # Descrição do modelo
+  - name: int_dim_shippers  
+    description: "Dimensão de transportadoras"  
     columns:
-      - name: shipper_id  # Nome da coluna
-        description: "ID único da transportadora"  # Descrição da coluna
+      - name: shipper_id  
+        description: "ID único da transportadora"  
         data_tests:
-          - not_null  # Teste para garantir que a coluna não tenha valores nulos
-          - unique  # Teste para garantir que os valores na coluna sejam únicos
-      - name: company_name  # Nome da coluna
-        description: "Nome da empresa transportadora"  # Descrição da coluna
+          - not_null  
+          - unique  
+      - name: company_name  
+        description: "Nome da empresa transportadora"  
         data_tests:
-          - not_null  # Teste para garantir que a coluna não tenha valores nulos
-      - name: phone  # Nome da coluna
-        description: "Telefone da transportadora"  # Descrição da coluna
+          - not_null  
+      - name: phone  
+        description: "Telefone da transportadora"  
 
-  - name: int_orders  # Nome do modelo
-    description: "Fatos dos pedidos"  # Descrição do modelo
+  - name: int_fact_orders  
+    description: "Fatos dos pedidos"  
     columns:
-      - name: order_id  # Nome da coluna
-        description: "ID único do pedido"  # Descrição da coluna
+      - name: order_id  
+        description: "ID único do pedido"  
         data_tests:
-          - not_null  # Teste para garantir que a coluna não tenha valores nulos
-      - name: customer_id  # Nome da coluna
-        description: "ID do cliente que fez o pedido"  # Descrição da coluna
+          - not_null  
+      - name: customer_id  
+        description: "ID do cliente que fez o pedido"  
         data_tests:
-          - not_null  # Teste para garantir que a coluna não tenha valores nulos
-      - name: employee_id  # Nome da coluna
-        description: "ID do funcionário que atendeu o pedido"  # Descrição da coluna
+          - not_null  
+          - relationships:
+              to: ref('int_customers')
+              field: customer_id
+      - name: employee_id  
+        description: "ID do funcionário que atendeu o pedido"  
         data_tests:
-          - not_null  # Teste para garantir que a coluna não tenha valores nulos
-      - name: order_date  # Nome da coluna
-        description: "Data do pedido"  # Descrição da coluna
+          - not_null  
+          - relationships:
+              to: ref('int_employees')
+              field: id_employee
+      - name: order_date  
+        description: "Data do pedido"  
         data_tests:
-          - not_null  # Teste para garantir que a coluna não tenha valores nulos
-      - name: required_date  # Nome da coluna
-        description: "Data requerida para entrega do pedido"  # Descrição da coluna
-      - name: shipped_date  # Nome da coluna
-        description: "Data de envio do pedido"  # Descrição da coluna
-      - name: ship_via  # Nome da coluna
-        description: "ID da transportadora utilizada para envio"  # Descrição da coluna
-      - name: freight  # Nome da coluna
-        description: "Custo do frete do pedido"  # Descrição da coluna
-      - name: ship_name  # Nome da coluna
-        description: "Nome do destinatário do pedido"  # Descrição da coluna
-      - name: ship_address  # Nome da coluna
-        description: "Endereço de entrega do pedido"  # Descrição da coluna
-      - name: ship_city  # Nome da coluna
-        description: "Cidade de entrega do pedido"  # Descrição da coluna
-      - name: ship_region  # Nome da coluna
-        description: "Estado de entrega do pedido"  # Descrição da coluna
-      - name: ship_postal_code  # Nome da coluna
-        description: "Código postal de entrega do pedido"  # Descrição da coluna
-      - name: ship_country  # Nome da coluna
-        description: "País de entrega do pedido"  # Descrição da coluna
-      - name: product_id  # Nome da coluna
-        description: "ID do produto pedido"  # Descrição da coluna
-      - name: unit_price  # Nome da coluna
-        description: "Preço unitário do produto pedido"  # Descrição da coluna
-      - name: quantity  # Nome da coluna
-        description: "Quantidade do produto pedido"  # Descrição da coluna
-      - name: discount  # Nome da coluna
+          - not_null  
+      - name: required_date  
+        description: "Data requerida para entrega do pedido"  
+      - name: shipped_date  
+        description: "Data de envio do pedido"  
+      - name: ship_via  
+        description: "ID da transportadora utilizada para envio"  
+      - name: freight  
+        description: "Custo do frete do pedido"  
+      - name: ship_name  
+        description: "Nome do destinatário do pedido"  
+      - name: ship_address  
+        description: "Endereço de entrega do pedido"  
+      - name: ship_city  
+        description: "Cidade de entrega do pedido"  
+      - name: ship_region  
+        description: "Estado de entrega do pedido"  
+      - name: ship_postal_code  
+        description: "Código postal de entrega do pedido"  
+      - name: ship_country  
+        description: "País de entrega do pedido"  
+      - name: product_id  
+        description: "ID do produto pedido"  
+      - name: unit_price  
+        description: "Preço unitário do produto pedido"  
+      - name: quantity  
+        description: "Quantidade do produto pedido"  
+      - name: discount  
         description: "Desconto aplicado ao produto"

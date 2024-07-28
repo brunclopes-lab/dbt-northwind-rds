@@ -1,13 +1,7 @@
 {{ config(
-    materialized='table',
-	unique_key='employee_id'
+	alias='dim_employees',
+    materialized='table'
 ) }}
-
-with source as (
-	select 
-	* 
-	from {{source('northwind_prod', 'employees')}}
-)
 
 select
 	employee_id,
@@ -23,10 +17,9 @@ select
 	postal_code,
 	country,
 	home_phone,
-	"extension" as extension,
+	extension,
 	photo,
 	notes,
-	reports_to,
-	photo_path
+	reports_to
 from
-	source
+	{{ref('staging_dim_employees')}}

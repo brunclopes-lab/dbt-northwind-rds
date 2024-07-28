@@ -1,4 +1,5 @@
 {{ config(
+	alias='dim_products',
     materialized='table',
 	unique_key='product_id'
 ) }}

@@ -6,9 +6,9 @@ select
     customers.contact_name, 
     sum(orders.unit_price * orders.quantity * (1.0 - orders.discount) * 100) / 100 as payments
 from 
-    {{ ref('int_customers') }} as customers
+    {{ ref('int_dim_customers') }} as customers
 inner join 
-    {{ ref('int_orders') }} as orders on orders.customer_id = customers.customer_id
+    {{ ref('int_fact_orders') }} as orders on orders.customer_id = customers.customer_id
 where 
     lower(customers.country) = 'uk'
 group by 

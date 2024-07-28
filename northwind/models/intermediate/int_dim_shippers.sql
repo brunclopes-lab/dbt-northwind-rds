@@ -1,4 +1,5 @@
 {{ config(
+	alias='dim_shippers',
     materialized='table'
 ) }}
 
@@ -7,4 +8,4 @@ select
 	company_name,
 	phone
 from
-	{{ref('staging_shippers')}}
+	{{ref('staging_dim_shippers')}}

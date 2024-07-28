@@ -1,4 +1,5 @@
 {{ config(
+	alias='dim_customers',
     materialized='table'
 ) }}
 
@@ -16,4 +17,4 @@ select
 	phone,
 	fax
 from
-	{{ref('staging_customers')}}
+	{{ref('staging_dim_customers')}}

@@ -8,7 +8,7 @@ with receitas_mensais as (
         extract(month from orders.order_date) as mes,
         sum(orders.unit_price * orders.quantity * (1.0 - orders.discount)) as receita_mensal
     from
-        {{ ref('int_orders') }} as orders
+        {{ ref('int_fact_orders') }} as orders
     group by
         extract(year from orders.order_date),
         extract(month from orders.order_date)
