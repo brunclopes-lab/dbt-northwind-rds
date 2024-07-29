@@ -1,7 +1,7 @@
 version: 2 
 
 models:
-  - name: staging_customers  
+  - name: staging_dim_customers  
     description: "Dimensão de clientes"  
     columns:
       - name: customer_id  
@@ -36,7 +36,7 @@ models:
       - name: fax  
         description: "Fax do cliente"  
 
-  - name: staging_employees  
+  - name: staging_dim_employees  
     description: "Dimensão de funcionários"  
     columns:
       - name: employee_id  
@@ -83,7 +83,7 @@ models:
       - name: photo_path  
         description: "Caminho da foto do funcionário"  
 
-  - name: staging_products  
+  - name: staging_dim_products  
     description: "Dimensão de produtos"  
     columns:
       - name: product_id  
@@ -116,7 +116,7 @@ models:
       - name: category_description  
         description: "Descrição da categoria do produto"  
 
-  - name: staging_shippers  
+  - name: staging_dim_shippers  
     description: "Dimensão de transportadoras"  
     columns:
       - name: shipper_id  
@@ -131,7 +131,7 @@ models:
       - name: phone  
         description: "Telefone da transportadora"  
 
-  - name: staging_orders  
+  - name: staging_fact_orders  
     description: "Fatos dos pedidos"  
     columns:
       - name: order_id  
@@ -143,15 +143,15 @@ models:
         data_tests:
           - not_null  
           - relationships:
-              to: ref('staging_customers')
+              to: ref('staging_dim_customers')
               field: customer_id
       - name: employee_id  
         description: "ID do funcionário que atendeu o pedido"  
         data_tests:
           - not_null  
           - relationships:
-              to: ref('staging_employees')
-              field: id_employee
+              to: ref('staging_dim_employees')
+              field: employee_id
       - name: order_date  
         description: "Data do pedido"  
         data_tests:

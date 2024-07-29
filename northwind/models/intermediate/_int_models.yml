@@ -143,15 +143,15 @@ models:
         data_tests:
           - not_null  
           - relationships:
-              to: ref('int_customers')
+              to: ref('int_dim_customers')
               field: customer_id
       - name: employee_id  
         description: "ID do funcionário que atendeu o pedido"  
         data_tests:
           - not_null  
           - relationships:
-              to: ref('int_employees')
-              field: id_employee
+              to: ref('int_dim_employees')
+              field: employee_id
       - name: order_date  
         description: "Data do pedido"  
         data_tests:
